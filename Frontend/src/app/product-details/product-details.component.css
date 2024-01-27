@@ -1,0 +1,19 @@
+.btn-cart{ background-color:#FF9F00 ; width: 150px; color: white; font-size: .7rem;}  
+.btn-buy{background-color:#FB641B ; width: 150px; color: white; font-size: .7rem;}
+.row{
+    background-color: white;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.image img{
+    padding: 10px;
+}
+
+p{
+    font-size: 24px;
+}
+
+.desc{
+    margin-top: 20px;
+}

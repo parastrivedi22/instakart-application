@@ -1,0 +1,74 @@
+<div [hidden]="toggle" class="container  p-2 my-5 ">
+
+  <div *ngIf="alertToggle=='err'?true:false" class="col-sm-5 m-auto alert alert-warning alert-dismissible fade show"
+    role="alert">
+    <strong>Oops!</strong> You entered wrong id or password
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class=" col-sm-5 m-auto p-3 border  rounded-2 bg-light">
+    <h3 class="text-center">LogIn <small class="text-secondary"> for seller</small> </h3>
+
+
+    <div class="mb-2">
+      <label for="userEmail" class="form-label">Email address<span class="star">*</span> </label>
+      <input formControlName="userEmail" name="userEmail" type="email" class="form-control" id="userEmail"
+        aria-describedby="emailHelp">
+    </div>
+    <div class="mb-2">
+      <label for="userPassword" class="form-label">Password<span class="star">*</span></label>
+      <input formControlName="userPassword" name="userPassword" type="password" class="form-control" id="userPassword">
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary mt-3">Sign Up</button>
+    <hr />
+    <small>Need an account? <a (click)="toggler()" style="color: blueviolet;cursor: pointer;"> Sign Up</a></small>
+
+  </form>
+
+
+
+</div>
+
+
+
+<!-- ---------------------------------------- -->
+
+<div [hidden]="!toggle" class="container  p-2 my-5 ">
+  <form [formGroup]="signupForm" (ngSubmit)="onSignup()" class=" col-sm-5 m-auto p-3 border  rounded-2 bg-light">
+    <h3 class="text-center">SignUp <small class="text-secondary"> for seller</small></h3>
+
+    <div *ngIf="alertToggle=='done'?true:false" s class=" alert alert-success alert-dismissible fade show" role="alert">
+      <strong>!!</strong> Account is created successfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div *ngIf="alertToggle=='wrong'?true:false" s class=" alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>!!Opps</strong> Something went wrong
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="mb-2">
+      <label for="fullName" class="form-label">Full Name<span class="star">*</span></label>
+      <input formControlName="fullName" name="fullName" type="text" class="form-control" id="fullName"
+        aria-describedby="emailHelp">
+    </div>
+    <div class="mb-2">
+      <label for="userEmail" class="form-label">Email address<span class="star">*</span> </label>
+      <input formControlName="userEmail" name="userEmail" type="email" class="form-control" id="userEmail"
+        aria-describedby="emailHelp">
+    </div>
+    <div class="mb-2">
+      <label for="userPassword" class="form-label">Password<span class="star">*</span></label>
+      <input formControlName="userPassword" name="userPassword" type="password" class="form-control" id="userPassword">
+    </div>
+
+    <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary mt-3">Sign Up</button>
+    <hr />
+    <small>already have an account? <a (click)="toggler()" style="color: blueviolet;cursor: pointer;"> Login
+        Up</a></small>
+
+  </form>
+
+
+</div>

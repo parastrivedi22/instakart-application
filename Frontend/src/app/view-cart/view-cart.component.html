@@ -1,0 +1,74 @@
+<div>
+    <h3 class="text-center bg-white p-2 border border-1 rounded">InstaKart</h3>
+</div>
+
+<div *ngIf="isEmpty" class="container  bg-white mt-3 rounded-2  m-auto ">
+    <div class="d-flex flex-column justify-content-center align-items-center p-4">
+        <img src="https://rukminim2.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+            alt="" style="height: 200px; width: 280px;">
+        <p class="mt-1">Your cart is empty!</p>
+        <button class="btn btn-primary m-1 rounded-1 btn-lg" routerLink="/">Shop now</button>
+    </div>
+
+</div>
+
+
+<div class=" d-sm-flex  p-2">
+    <div class="col-sm-7">
+
+        <div *ngFor="let product of productList"
+            class="d-flex bg-white position-relative   m-1 border border-2  rounded-2 p-2">
+            <div class=" ">
+                <img class="mb-5" [src]="product.productImageUrl" style="height: 100px; width: 80px;">
+                <div class=" m-2  position-absolute bottom-0 start-0 ">
+                    <span (click)="quantity('desc', product)"
+                        class="btn btn-sm  btn-secondary p-1 rounded-0 rounded-start ">-</span>
+                    <span class="btn btn-sm btn-secondary px-4 rounded-0 ">{{product.productQuantity}}</span>
+                    <span (click)="quantity('incs', product)" class="btn btn-sm btn-secondary p-1 rounded-0  rounded-end
+                    ">+</span>
+                </div>
+            </div>
+            <div class="ms-4 ">
+                <h6>{{product.productName}}</h6>
+                <small class="priceTag">₹{{product.productPrice}}</small>
+                <button (click)="removeFromCart(product)"
+                    class="position-absolute bottom-0 end-0 btn btn-outline-danger p-1 btn-sm m-2 border-1">remove</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="col-sm-4 ">
+        <div *ngIf="productList.length>0" class=" bg-white border border-2 m-1 rounded-2 p-3  ">
+            <h5 class="m-2">PRICE DETAILS</h5>
+            <div>
+                <table class="table  ">
+                    <tbody>
+                        <tr class="p-5">
+                            <td>Price</td>
+                            <td>{{grandTotal|currency:'INR':'symbol':'1.2-2'}}</td>
+                        </tr>
+                        <tr class="m-2">
+                            <td>Discount</td>
+                            <td *ngIf="grandTotal>=20000" class="col-green">-1000</td>
+                            <td *ngIf="grandTotal<=20000" class="col-green">-50</td>
+                        </tr>
+                        <tr class="m-2">
+                            <td>Delivery Charges</td>
+                            <td class="col-green"> Free</td>
+                        </tr>
+                        <tr class="">
+                            <td>Total Amount</td>
+                            <td *ngIf="grandTotal>=20000">{{grandTotal-1000|currency:'INR':'symbol':'1.2-2'}}</td>
+                            <td *ngIf="grandTotal<=20000">{{grandTotal-50|currency:'INR':'symbol':'1.2-2'}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>

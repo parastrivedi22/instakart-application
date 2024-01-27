@@ -1,0 +1,30 @@
+<div class="container  p-2 my-5 ">
+
+  <div class=" col-sm-5 m-auto p-3 border  rounded-2 bg-light">
+    <h3 class="text-center">LogIn</h3>
+
+    <div *ngIf="alertMsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Opps!</strong> Something went wrong
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="mb-3">
+        <label for="userId" class="form-label">Email address<span class="star">*</span></label>
+        <input formControlName="userEmail" type="email" class="form-control" id="userId" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="userPassword" class="form-label">Password<span class="star">*</span></label>
+        <input formControlName="userPassword" type="password" class="form-control" id="userPassword">
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary mt-3">Login</button>
+    </form>
+
+    <hr />
+    <small>Need an account? <a routerLink="/signup" style="color: blueviolet;cursor: pointer;"> Sign Up</a></small>
+
+  </div>
+
+
+</div>

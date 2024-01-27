@@ -1,0 +1,12 @@
+<div class=" product-card border border-light rounded-2 bg-light p-2 text-center  "
+    routerLink="/product/{{product.id}}">
+    <div class="product-card-image">
+        <img [src]="product.productImageUrl" alt="">
+    </div>
+    <div class="product-card-body mt-3  ">
+        <h6 class="product-name">{{product.productName}}</h6>
+        <span class="product-price-discounted m-1"> <b><span>₹</span> {{product.productPrice}}</b></span>
+        <!-- <del class="product-price m-1"></del> -->
+
+    </div>
+</div>

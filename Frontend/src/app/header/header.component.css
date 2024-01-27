@@ -1,0 +1,9 @@
+.search-input{
+position: relative;
+}
+
+.search-list{
+    position: absolute;
+    top: 40px;
+    z-index: 999;
+}

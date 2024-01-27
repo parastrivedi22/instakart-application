@@ -1,0 +1,12 @@
+<app-carousel></app-carousel>
+
+
+<div class="container  p-3">
+    <div class="row  row-cols-sm-2  row-cols-md-2 row-cols-lg-6 g-2 pb-4 ">
+
+        <div *ngFor="let product of products">
+            <app-product-card [product]='product'></app-product-card>
+        </div>
+
+    </div>
+</div>

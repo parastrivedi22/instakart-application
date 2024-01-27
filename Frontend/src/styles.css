@@ -1,0 +1,24 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap');
+
+.star{
+    color:red;
+    font-weight: 600;
+}
+.bold{
+    font-weight: bold;
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+
+
+.error-msg{
+    color: red;
+    
+}
+
+.col-green{
+    color: rgb(82, 197, 113) !important;
+}

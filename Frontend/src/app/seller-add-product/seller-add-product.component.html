@@ -1,0 +1,59 @@
+<div *ngIf="loading">
+  <img class="position-absolute top-50 start-50 translate-middle" src="assets/circle-1700.gif" alt=" jdfkjsdk"
+    height="100px " width=" 100px">
+</div>
+
+<div class="container  p-2 my-5 ">
+  <div *ngIf="alertMsg=='added'?true:false" class="alert alert-success alert-dismissible fade show col-sm-5 m-auto p-3"
+    role="alert">
+    <strong>!!</strong> New product added successfuly
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div *ngIf="alertMsg=='error'?true:false" class="alert alert-danger alert-dismissible fade show col-sm-5 m-auto p-3"
+    role="alert">
+    <strong>!OPPs</strong> Something went wrong
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <form [formGroup]="addProductForm" (ngSubmit)="onAddProduct()"
+    class=" col-sm-5 m-auto p-3 border  rounded-2 bg-light">
+    <h3 class="text-center">New Product</h3>
+
+
+    <div class="mb-2">
+      <label for="productName" class="form-label">Product Name<span class="star">*</span> </label>
+      <input formControlName="productName" name="productName" type="text" class="form-control" id="productName"
+        aria-describedby="emailHelp">
+    </div>
+    <div class="mb-2">
+      <label for="productPrice" class="form-label">Product Price<span class="star">*</span></label>
+      <input formControlName="productPrice" name="productPrice" type="number" class="form-control" id="productPrice">
+    </div>
+    <div class="mb-2">
+      <label for="productInStock" class="form-label">Product Qunatity in Stock<span class="star">*</span></label>
+      <input formControlName="productInStock" name="productInStock" type="number" class="form-control"
+        id="productInStock">
+    </div>
+    <div class="mb-2">
+      <label for="productCategory" class="form-label">Product Category<span class="star">*</span></label>
+      <input formControlName="productCategory" name="productCategory" type="text" class="form-control"
+        id="productCategory">
+    </div>
+    <div class="mb-2">
+      <label for="productDescription" class="form-label">Product Description<span class="star">*</span></label>
+      <input formControlName="productDescription" name="productDescription" type="text" class="form-control"
+        id="productDescription">
+    </div>
+    <div class="mb-2">
+      <label for="productImageUrl" class="form-label">Product Image <span class="star">*</span></label>
+      <input (change)="onChageFile($event)" formControlName="productImageUrl" name="productImageUrl" type="file"
+        class="form-control" id="productImageUrl">
+    </div>
+
+    <button type="submit" [disabled]="addProductForm.invalid" class="btn btn-primary mt-3"> Add </button>
+
+  </form>
+
+
+
+</div>

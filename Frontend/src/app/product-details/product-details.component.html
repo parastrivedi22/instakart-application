@@ -1,0 +1,42 @@
+<div class="row    ">
+    <div class="image col-12 col-md-3 ">
+        <img class="w-100 border border-1" src={{product.productImageUrl}} alt="">
+        <div *ngIf="userType=='buyer'?true:false" class="text-center ">
+            <button *ngIf="!isAdd" class="btn btn-cart rounded-2 p-2 m-2 bold" (click)="addToCart(product)">ADD TO
+                CART</button>
+            <button *ngIf="isAdd" class="btn btn-cart rounded-2 p-2 m-2 bold"
+                (click)="removeFromCart(product.id)">REMOVE
+                FROM
+                CART</button>
+            <button class="btn btn-buy rounded-2 p-2 m-2 bold">BUY NOW</button>
+        </div>
+    </div>
+    <div class="details  col-12 col-md-8">
+        <p class=" p-3 ">{{product.productName}}</p>
+        <h5 class="p-3 bold"><span>₹</span> {{product.productPrice}}</h5>
+
+        <!-- bank offer -->
+        <div class="list">
+            <h6 class="bold ps-3">Available Offers </h6>
+            <ol class="list-group ">
+                <li class="list-group-item border-0 "><span class="bold"><img
+                            src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                            style="width: 18px; height: 18px;" alt=""> Bank Offer</span> 10% off on AU Bank Credit Card
+                    Txns, up to ₹1,500 on orders of ₹5,000 and above</li>
+                <li class="list-group-item border-0 "><span class="bold"><img
+                            src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                            style="width: 18px; height: 18px;" alt=""> Bank Offer</span> 10% off on Bank of Baroda
+                    Credit Card Txns, up to ₹1,500 on orders of ₹5,000 and above</li>
+                <li class="list-group-item border-0 "><span class="bold"><img
+                            src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                            style="width: 18px; height: 18px;" alt=""> Bank Offer</span> 10% off on Bank of Baroda
+                    Credit Card EMI Txns, up to ₹2,000 on orders of ₹5,000 and above</li>
+
+            </ol>
+        </div>
+        <!-- product description -->
+        <div class=" desc ps-3 py-2">
+            <small>{{product.productDescription}}</small>
+        </div>
+    </div>
+</div>

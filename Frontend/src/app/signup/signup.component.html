@@ -1,0 +1,49 @@
+<div *ngIf="loading">
+  <img class="position-absolute top-50 start-50 translate-middle" src="assets/circle-1700.gif" alt=" jdfkjsdk"
+    height="100px " width=" 100px">
+</div>
+<div class="container  p-2 my-5 ">
+
+  <div class=" col-sm-5 m-auto p-3 border  rounded-2 bg-light">
+    <h3 class="text-center">Sign Up</h3>
+
+    <div *ngIf="alertMsg=='error'? true: false" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Opps!</strong> Something went wrong
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div *ngIf="alertMsg=='done'? true: false" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong> Your account created successfully!</strong> go for login
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+
+      <div class="mb-2">
+        <label for="fullName" class="form-label">Full Name<span class="star">*</span></label>
+        <input formControlName="fullName" name="fullName" type="text" class="form-control" id="fullName"
+          aria-describedby="emailHelp">
+
+      </div>
+
+      <div class="mb-2">
+        <label for="userEmail" class="form-label">Email address<span class="star">*</span> </label>
+        <input formControlName="userEmail" name="userEmail" type="email" class="form-control" id="userEmail"
+          aria-describedby="emailHelp">
+      </div>
+      <div class="mb-2">
+        <label for="userPassword" class="form-label">Password<span class="star">*</span></label>
+        <input formControlName="userPassword" name="userPassword" type="password" class="form-control"
+          id="userPassword">
+      </div>
+
+      <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary mt-3">Sign Up</button>
+    </form>
+    <hr />
+    <small>already have an account? <a routerLink="/login" style="color: blueviolet;cursor: pointer;"> Login
+        Up</a></small>
+
+  </div>
+
+</div>

@@ -1,0 +1,100 @@
+{
+  "seller": [
+    {
+      "fullName": "paras",
+      "userEmail": "xyz@gmail.com",
+      "userPassword": "1234",
+      "id": 1
+    },
+    {
+      "fullName": "xyz",
+      "userEmail": "a@gmail.com",
+      "userPassword": "1234",
+      "id": 2
+    },
+    {
+      "fullName": "Ajay Nagar",
+      "userEmail": "aj@gmail.com",
+      "userPassword": "1234",
+      "id": 3
+    },
+    {
+      "fullName": "seller",
+      "userEmail": "seller@gmail.com",
+      "userPassword": "1234",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "IPhone 14 Pro",
+      "productPrice": 130000,
+      "productCategory": "An Apple brand product.",
+      "productDescription": "",
+      "productQuantity": 1,
+      "productImageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/c/4/d/-original-imaghx9qygjjg8hz.jpeg?q=70"
+    },
+    {
+      "productName": "Realme 11 Pro 5G",
+      "productPrice": 23999,
+      "productDescription": "",
+      "productQuantity": 1,
+      "productCategory": "mobile",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/z/4/-original-imagqxx2haehpjnf.jpeg?q=70",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "productName": "Samsung Galaxy F54",
+      "productPrice": 32999,
+      "productQuantity": 2,
+      "productCategory": "mobile",
+      "productDescription": "Samsung Smart Phone",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/q/t/h/galaxy-f54-5g-sm-e546bzshins-samsung-original-imagq79f82pfyzvh.jpeg?q=70",
+      "userId": 2,
+      "productId": 3
+    },
+    {
+      "productName": "Apple watch 8 Series GPS",
+      "productPrice": 39999,
+      "productQuantity": 1,
+      "productCategory": "smart watch",
+      "productDescription": "An Apple brand product",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/416/416/xif0q/smartwatch/i/1/m/-original-imaghxg3nyd3dhwp.jpeg?q=70",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "productName": "Apple Watch Ultra GPS + Cellular",
+      "productQuantity": 1,
+      "productPrice": 82999,
+      "productDescription": "An Apple brand product",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/416/416/xif0q/smartwatch/f/4/c/-original-imaghxgpspzj6y5f.jpeg?q=70"
+    },
+    {
+      "id": 6,
+      "productName": "Boult Audio Airbass Z35 with ZEN ENC Mic, 32H Playtime, 45ms Ultra-Low Latency Mode, 5.3 Bluetooth Headset  (Sunset Grey, True Wireless)",
+      "productQuantity": 1,
+      "productPrice": 899,
+      "productCategory": "ear buds music bluethoot",
+      "productDescription": "With Mic:Yes Bluetooth version: 5.3 Wireless range: 10 m Battery life: 32 hrs Zen Tech ENC mic | 45ms Ultra-Low Latency Gaming | 32Hrs Playtime Lightning Boult Type-C Fastest Charging | 10 Mins Charge = 150 Mins Playtime | 13mm Drivers | Sub-woofer BoomX Tech for Supreme Bass | IPX5 Water Resistant | Voice Assistant | Touch Control",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/0/z/w/-original-imaghhvg4zhuz87z.jpeg?q=70"
+    }
+  ],
+  "user": [
+    {
+      "fullName": "paras trivedi",
+      "userEmail": "p@g.com",
+      "userPassword": "1234",
+      "id": 1
+    },
+    {
+      "fullName": "paras",
+      "userEmail": "user@gmail.com",
+      "userPassword": "1234",
+      "id": 2
+    }
+  ],
+  "cart": []
+}
